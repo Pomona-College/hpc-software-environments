@@ -1,7 +1,7 @@
 [sagehen-user-guide]: https://pomona-college.github.io/
 [pomona-its]: https://www.pomona.edu/its/
 [hpc-support]: its-hpc@pomona.edu
-[it-helpdesk]: ithelpdesk@pomona.edu
+[it-helpdesk]: servicedesk@pomona.edu
 [lmod-docs]: https://lmod.readthedocs.io/
 [lmod-github]: https://github.com/TACC/Lmod
 [lua]: https://www.lua.org/

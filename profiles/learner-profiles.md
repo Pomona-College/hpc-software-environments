@@ -68,7 +68,7 @@ Sam needs to use machine learning libraries (TensorFlow, scikit-learn) on Sagehe
 - Clear explanation of why environment management is important
 - Step-by-step conda environment setup for machine learning
 - Templates for reproducible job scripts
-- Understanding of when to ask for help (it-hpc@pomona.edu)
+- Understanding of when to ask for help (its-hpc@pomona.edu)
 
 ---
 
