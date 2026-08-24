@@ -1,4 +1,4 @@
-[sagehen-user-guide]: https://pomona-college-hpc.github.io/
+[sagehen-user-guide]: https://pomona-college.github.io/
 [pomona-its]: https://www.pomona.edu/its/
 [hpc-support]: its-hpc@pomona.edu
 [it-helpdesk]: ithelpdesk@pomona.edu

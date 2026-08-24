@@ -4,7 +4,8 @@ keywords: "Pomona College, HPC, research computing, software modules, conda, vir
 carpentry: "incubator"
 description: "Learn how to manage software, Python environments, and module collections on the Sagehen HPC cluster."
 contact: "its-hpc@pomona.edu"
-source: "https://github.com/pomona-college-hpc/software-environments"
+source: 'https://github.com/Pomona-College/hpc-software-environments'
+url: 'https://pomona-college.github.io/hpc-software-environments/'
 created: "2026-03-05"
 license: "CC-BY 4.0"
 branch: "main"

@@ -52,7 +52,7 @@ Each episode combines teaching with hands-on exercises. You'll need SSH access t
 
 ## Key Resources
 
-- [Sagehen User Guide](https://pomona-college-hpc.github.io/)
+- [Sagehen User Guide](https://pomona-college.github.io/)
 - [SLURM Documentation](https://slurm.schedmd.com/sbatch.html)
 - [Lmod Documentation](https://lmod.readthedocs.io/)
 - [Conda Documentation](https://docs.conda.io/)

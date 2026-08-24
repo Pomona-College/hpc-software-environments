@@ -351,7 +351,7 @@ By end of workshop, learners should:
 ## Post-Workshop Resources
 
 Point learners to:
-- **Sagehen user guide:** https://pomona-college-hpc.github.io/
+- **Sagehen user guide:** https://pomona-college.github.io/
 - **Lmod docs:** https://lmod.readthedocs.io/
 - **Conda docs:** https://docs.conda.io/
 - **Support email:** its-hpc@pomona.edu

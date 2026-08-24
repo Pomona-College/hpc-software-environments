@@ -84,7 +84,7 @@ Clone the repository and work through episodes locally. All content is in Markdo
 
 ## Key Resources
 
-- [Sagehen User Guide](https://pomona-college-hpc.github.io/)
+- [Sagehen User Guide](https://pomona-college.github.io/)
 - [Lmod Documentation](https://lmod.readthedocs.io/)
 - [Conda User Guide](https://docs.conda.io/projects/conda/en/latest/user-guide.html)
 - [SLURM Documentation](https://slurm.schedmd.com/)
