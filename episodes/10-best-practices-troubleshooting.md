@@ -39,9 +39,9 @@ Note: Bare `quota` is unreliable on BeeGFS; use Pomona's `quota_check.sh` wrappe
 ```bash
 $ quota_check.sh
 $ du -sh --apparent-size ~/.conda/envs/*
-2.1G    /home/username/.conda/envs/deeplearning_2024
-1.3G    /home/username/.conda/envs/genomics_2024
-500M    /home/username/.conda/envs/myproject
+2.1G    /rhome/<myusername>/.conda/envs/deeplearning_2024
+1.3G    /rhome/<myusername>/.conda/envs/genomics_2024
+500M    /rhome/<myusername>/.conda/envs/myproject
 ```
 
 ### Clean up unused environments
@@ -71,7 +71,7 @@ $ du -sh ~/* | sort -rh | head -10
 Before running a 24-hour job, test locally:
 
 ```bash
-$ module load gcc r
+$ module load r
 $ Rscript analysis.R < small_test_data.csv > output.txt
 ```
 
@@ -84,7 +84,7 @@ $ Rscript analysis.R < small_test_data.csv > output.txt
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=2G
 
-module load gcc r
+module load r
 Rscript analysis.R < small_test_data.csv > output.txt
 ```
 
@@ -103,7 +103,7 @@ Once you know it works, submit the full job.
 ### Common issues
 
 1. **Module not found:**
-   - Check spelling: `module avail -t | grep name`
+   - Check spelling: `module avail name` (or `module spider name`)
    - Contact its-hpc@pomona.edu
 2. **Code worked locally but fails on cluster:**
    - Environment mismatch: verify modules in job script
@@ -160,8 +160,7 @@ $ cat > job_script.sh << 'EOF'
 #SBATCH --mem=32G
 
 module purge
-module load gcc/11.2.0
-module load miniconda3
+module load miniconda3/py313_26.3.2-2
 
 conda activate genomics
 python analyze_genomes.py
@@ -196,8 +195,8 @@ $ conda clean --all
 
 Expected output from quota_check.sh shows your current usage and limit. `du -sh --apparent-size` shows sizes like:
 ```
-1.2G    /home/username/.conda/envs/bigproject
-500M    /home/username/.conda/envs/test_env
+1.2G    /rhome/<myusername>/.conda/envs/bigproject
+500M    /rhome/<myusername>/.conda/envs/test_env
 ```
 
 After cleanup, total usage drops and you stay under quota. This regular maintenance prevents quota issues.
@@ -216,3 +215,6 @@ After cleanup, total usage drops and you stay under quota. This regular maintena
 - Start with `module purge`, then load specific module versions explicitly
 
 ::::::::::::::::::::::::::::::::::::::::::::::
+
+<!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
+<script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script>

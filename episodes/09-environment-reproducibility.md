@@ -44,9 +44,8 @@ exercises: 10
 module purge
 
 # ALWAYS load specific versions
-module load gcc/11.2.0
-module load r/4.2.3
-module load miniconda3
+module load r/4.5.1
+module load miniconda3/py313_26.3.2-2
 
 # ALWAYS activate environments explicitly
 conda activate myanalysis
@@ -121,16 +120,13 @@ $ git commit -m "Initial conda environment specification"
 #!/bin/bash
 #SBATCH --job-name=quantum_calc
 
-# GCC 11.2.0 is required for GAMESS 2020
-module load gcc/11.2.0
+# Gaussian 16 for the quantum chemistry calculation
+module load gaussian/16c01_avx2
 
-# GAMESS uses GCC, so load after compiler
-module load gamess/2020
+# R for statistical analysis of the results
+module load r/4.5.1
 
-# R/4.2.3 for statistical analysis of results
-module load r/4.2.3
-
-gamess < input.inp > output.log
+g16 < input.com > output.log
 Rscript analyze.R
 ```
 
@@ -156,8 +152,9 @@ Each project has its own `environment.yml` and conda environment.
 ### Challenge 1: Create a Reproducible Job Script
 
 Create a bash script called `final_job.sh` that:
+
 1. Starts with `module purge` for a clean state
-2. Loads gcc/11.2.0 and miniconda3
+2. Loads r/4.5.1 and miniconda3
 3. Activates a conda environment
 4. Runs `python --version` and `conda env list`
 5. Includes comments explaining each step
@@ -171,8 +168,8 @@ $ cat > final_job.sh << 'EOF'
 # Clean environment to avoid conflicts
 module purge
 
-# Load compiler for compatibility
-module load gcc/11.2.0
+# Load R at a pinned version
+module load r/4.5.1
 
 # Load Python via miniconda3
 module load miniconda3
@@ -195,6 +192,7 @@ $ chmod +x final_job.sh
 ## Solution
 
 The script demonstrates the key reproducibility practices:
+
 - Starting with `module purge` for clean state
 - Loading specific module versions (not defaults)
 - Explicit conda environment activation

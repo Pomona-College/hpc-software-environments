@@ -11,6 +11,7 @@ Welcome to the Software Environments and Module Management workshop! This course
 ## Who This Course Is For
 
 This workshop is designed for researchers and students who want to:
+
 - Use complex scientific software on Sagehen without conflicts
 - Manage multiple versions of the same software
 - Create reproducible Python environments for your research
@@ -59,6 +60,7 @@ Each episode combines teaching with hands-on exercises. You'll need SSH access t
 ## Prerequisites
 
 You should be comfortable with:
+
 - Basic Linux command-line operations (navigating directories, running commands)
 - Using SSH to connect to remote systems
 - Using a text editor (vi, nano, VS Code, etc.)
@@ -66,11 +68,12 @@ You should be comfortable with:
 ## Before You Start
 
 You'll need:
+
 - An active Sagehen account with SSH access
 - Basic familiarity with the Linux command line
 - A terminal application (Terminal on macOS, PowerShell on Windows, or Linux terminal)
 
-If you need to request an account or reset your password, contact its-hpc@pomona.edu.
+If you need an account, submit the [HPC account request form](https://servicedesk.pomona.edu/support/catalog/items/83); for password resets or other issues, contact its-hpc@pomona.edu.
 
 ## Attribution
 

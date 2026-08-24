@@ -10,7 +10,7 @@ title: Reference
 |---------|---------|
 | `module avail` | List all available modules |
 | `module avail r` | List modules matching "r" |
-| `module avail -t` | List in table format |
+| `module avail name` | Filter the listing (substring match) |
 | `module list` | Show currently loaded modules |
 | `module --list-collections` | Show your saved collections |
 
@@ -103,8 +103,8 @@ title: Reference
 ### 1. Load Modules
 
 ```bash
-$ module load gcc/11.2.0
-$ module load r/4.2.3
+$ module load openblas/0.3.25
+$ module load r/4.5.1
 $ module load miniconda3
 ```
 
@@ -132,8 +132,8 @@ $ conda activate myproject
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 
-module load gcc/11.2.0
-module load r/4.2.3
+module load openblas/0.3.25
+module load r/4.5.1
 module load miniconda3
 
 conda activate myproject
@@ -156,9 +156,9 @@ $ squeue -u $USER
 ### Load Specific Compiler Version for Compatibility
 
 ```bash
-module load gcc/9.3.0   # For older code
-module load gcc/11.2.0  # For newer code
-module swap gcc gcc/11.2.0  # Change between versions
+module load cuda/11.8.0   # For older code
+module load cuda/12.2.1   # For newer code
+module swap cuda cuda/12.2.1  # Change between versions
 ```
 
 ### Create Project-Specific Environment
@@ -192,7 +192,7 @@ conda env export > environment.yml
 module purge
 
 # Load required modules
-module load gcc/11.2.0
+# gcc is available system-wide on Sagehen -- no module load needed
 module load miniconda3
 
 # Activate environment
@@ -210,7 +210,9 @@ python main_script.py
 
 ```bash
 # Check spelling
-$ module avail -t | grep -i name
+$ module avail name          # built-in filter
+$ module spider name         # deep search, all versions
+$ module -t avail 2>&1 | grep -i name   # grep form (options BEFORE avail)
 
 # Check dependencies
 $ module show module_name

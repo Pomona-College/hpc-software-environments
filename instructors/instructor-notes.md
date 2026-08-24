@@ -28,9 +28,9 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 - Confirm all learners have Sagehen accounts and SSH access
 - Test SSH connections from your teaching location (account for network restrictions)
 - Verify modules listed in setup guide are current:
-  - `module avail r`:should show at least r/3.6.0 and r/4.2.3
-  - `module avail miniconda3`:should show at least miniconda3/22.11
-  - `module avail gcc`:should show gcc/9.3.0 and gcc/11.2.0
+  - `module avail r`:should show r/4.2.2, r/4.2.3, r/4.4.1, r/4.5.1 (D)
+  - `module avail miniconda3`:should show py311, py312, py313 versions (py313_26.3.2-2 D)
+  - `module avail cuda`:should show cuda/11.8.0, 12.0.0, 12.2.1 (D)
 - Test conda environment creation: `conda create -n testenv python=3.10` works
 - Prepare a demo conda environment for live examples
 
@@ -51,7 +51,7 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 3. **Clarity on PATH**:Learners struggle with abstract "PATH" concept. Show it:
    ```bash
    $ echo $PATH
-   /opt/lmod/r/4.2.3/bin:/opt/lmod/gcc/11.2.0/bin:...
+   /opt/.../r/4.5.1/bin:...
    ```
 
 ### Teaching Tips
@@ -87,9 +87,10 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 
 - **Demo grep with module avail:**
   ```bash
-  $ module avail -t | grep -E '^gcc'
-  gcc/9.3.0
-  gcc/11.2.0
+  $ module avail cuda          # built-in substring filter (there is no gcc module)
+  cuda/11.8.0
+  cuda/12.0.0
+  cuda/12.2.1
   ```
   This is powerful; it shows programmatic discovery without needing GUI tools.
 
@@ -100,7 +101,7 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 
 **Problem:** "grep: command not found" on some systems
 - **Solution:** Usually a PATH issue. Have learner do `module list` to check what's loaded
-- **Workaround:** Use `module avail -t` and scroll manually if grep unavailable
+- **Workaround:** Use `module avail <name>` (built-in filter) or `module spider <name>`
 
 ## Episode 3: Managing Modules (25 min)
 
@@ -114,7 +115,7 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 
 - **Live demo of saving/restoring:**
   ```bash
-  $ module load r gcc miniconda3
+  $ module load r openblas miniconda3
   $ module save myworkflow
   $ module purge
   $ module list  # Verify empty
@@ -253,8 +254,8 @@ Each episode builds on previous knowledge without being strictly prerequisite; i
 
   # Clean state and load required modules
   module purge
-  module load gcc/11.2.0
-  module load r/4.2.3
+  module load openblas/0.3.25
+  module load r/4.5.1
   module load miniconda3
 
   # Activate data analysis environment
@@ -369,7 +370,7 @@ Point learners to:
 - Provide pre-recorded demos
 
 ### Someone finds a module isn't available
-- Check on the spot: `module avail -t | grep modulename`
+- Check on the spot: `module avail modulename`
 - If not there, explain: "We can request it from its-hpc@pomona.edu"
 - Move on; don't get stuck on one person's missing software
 

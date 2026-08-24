@@ -1,5 +1,5 @@
 [sagehen-user-guide]: https://pomona-college-hpc.github.io/
-[pomona-its]: https://www.pomona.edu/administration/information-technology-services
+[pomona-its]: https://www.pomona.edu/its/
 [hpc-support]: its-hpc@pomona.edu
 [it-helpdesk]: ithelpdesk@pomona.edu
 [lmod-docs]: https://lmod.readthedocs.io/
