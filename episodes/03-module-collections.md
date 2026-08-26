@@ -65,7 +65,7 @@ Use `module purge` to start a fresh shell environment, avoid conflicts when swit
 
 ## Default Modules at Login
 
-When you first log into Sagehen, certain modules might be automatically loaded based on system configuration or your `.bashrc` file. Use `module purge` to clear them, then load only what you need for your current task.
+When you first log into Sagehen HPC, certain modules might be automatically loaded based on system configuration or your `.bashrc` file. Use `module purge` to clear them, then load only what you need for your current task.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 

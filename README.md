@@ -2,7 +2,7 @@
 
 ## About This Workshop
 
-This is a Carpentries Workbench workshop teaching software and environment management on Sagehen, Pomona College's HPC cluster. It covers Lmod module system fundamentals, conda environment creation, reproducible Python workflows, and best practices for research computing.
+This is a Carpentries Workbench workshop teaching software and environment management on Sagehen HPC, Pomona College's HPC cluster. It covers Lmod module system fundamentals, conda environment creation, reproducible Python workflows, and best practices for research computing.
 
 **Workshop Duration:** 2.5 hours (90 min teaching + 60 min exercises)
 **Level:** Intermediate
@@ -38,7 +38,7 @@ By the end of this workshop, you will be able to:
 - **Instructor Notes** (`instructors/instructor-notes.md`) :  Teaching tips, timing, troubleshooting
 - **Learner Profiles** (`profiles/learner-profiles.md`) :  Example learners and their needs
 
-## About Sagehen
+## About Sagehen HPC
 
 Sagehen is Pomona College's high-performance computing cluster managed by Information Technology Services (ITS). Key characteristics:
 

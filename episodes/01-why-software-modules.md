@@ -26,7 +26,7 @@ exercises: 5
 
 ### The Version Conflict Problem
 
-Imagine you're working on Sagehen with two research groups. One group needs R version 3.6.0 for legacy analysis scripts that haven't been updated in five years. Another group requires R version 4.2.3 for their latest genomics pipeline. Your colleague needs Gaussian 16 to run quantum chemistry simulations, but you need Gaussian 09 for continuity with your previous research.
+Imagine you're working on Sagehen HPC with two research groups. One group needs R version 3.6.0 for legacy analysis scripts that haven't been updated in five years. Another group requires R version 4.2.3 for their latest genomics pipeline. Your colleague needs Gaussian 16 to run quantum chemistry simulations, but you need Gaussian 09 for continuity with your previous research.
 
 Without a way to manage these different versions, installing them all in the same locations (like `/usr/bin` or `/usr/lib`) creates conflicts:
 - Programs and libraries overwrite each other

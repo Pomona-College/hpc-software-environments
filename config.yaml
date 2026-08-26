@@ -2,7 +2,7 @@
 title: "Software Environments and Module Management — Pomona College HPC Workshop Series"
 keywords: "Pomona College, HPC, research computing, software modules, conda, virtual environments, Lmod, Python environments"
 carpentry: "incubator"
-description: 'Managing software on Sagehen with Lmod modules, conda environments and pip, including reproducible environment exports.'
+description: 'Managing software on Sagehen HPC with Lmod modules, conda environments and pip, including reproducible environment exports.'
 contact: "its-hpc@pomona.edu"
 source: 'https://github.com/Pomona-College/hpc-software-environments'
 url: 'https://pomona-college.github.io/hpc-software-environments/'

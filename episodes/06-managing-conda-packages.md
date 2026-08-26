@@ -75,7 +75,7 @@ This exports only the packages you explicitly installed (not their dependencies)
 
 ### Watch Your Disk Quota
 
-Conda environments can use hundreds of MB to several GB each. On shared systems with disk quotas, this matters. Regularly check your usage and clean up old environments to stay under your limit. On Sagehen, /rhome and /bigdata share a 1 TB lab quota.
+Conda environments can use hundreds of MB to several GB each. On shared systems with disk quotas, this matters. Regularly check your usage and clean up old environments to stay under your limit. On Sagehen HPC, /rhome and /bigdata share a 1 TB lab quota.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 

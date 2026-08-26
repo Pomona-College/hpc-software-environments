@@ -6,12 +6,12 @@ title: Setup
 
 To participate in this workshop, you need:
 
-1. **An active Sagehen account** with SSH access
+1. **An active Sagehen HPC account** with SSH access
 2. **SSH client** installed on your computer
 3. **A text editor** (vi, nano, or VS Code with remote SSH)
 4. **Basic command-line familiarity**
 
-## Connecting to Sagehen
+## Connecting to Sagehen HPC
 
 ### macOS and Linux
 

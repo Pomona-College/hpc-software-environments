@@ -198,7 +198,7 @@ The script demonstrates the key reproducibility practices:
 - Explicit conda environment activation
 - Verification commands to prove setup worked
 
-This is the minimal reproducible template for any Sagehen job.
+This is the minimal reproducible template for any Sagehen HPC job.
 
 :::::::::::::::::::::::::::
 

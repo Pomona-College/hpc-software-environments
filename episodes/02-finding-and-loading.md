@@ -6,7 +6,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How do I find specific software on Sagehen?
+- How do I find specific software on Sagehen HPC?
 - How do I load and unload modules?
 - How do I learn what a module does before loading it?
 - What if I need software that isn't available?
