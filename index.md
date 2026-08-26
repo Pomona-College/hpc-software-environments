@@ -83,3 +83,9 @@ This workshop was developed for Pomona College by the Information Technology Ser
 
 **Last updated:** March 5, 2026
 **License:** CC-BY 4.0
+
+## Acknowledgments
+
+Developed by **Andrew Wilson**, Director of Research Computing and Digital
+Scholarship at Pomona College, with **Andrei Motchenko**, who tested, edited
+and produced screenshots for the workshop series.
