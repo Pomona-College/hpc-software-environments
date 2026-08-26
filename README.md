@@ -4,7 +4,7 @@
 
 This is a Carpentries Workbench workshop teaching software and environment management on Sagehen HPC, Pomona College's HPC cluster. It covers Lmod module system fundamentals, conda environment creation, reproducible Python workflows, and best practices for research computing.
 
-**Workshop Duration:** 2.5 hours (90 min teaching + 60 min exercises)
+**Workshop Duration:** about 3.5 hours (120 min teaching + 80 min exercises)
 **Level:** Intermediate
 **Prerequisites:** Basic Linux command-line knowledge, SSH access to Sagehen
 
@@ -78,7 +78,7 @@ Clone the repository and work through episodes locally. All content is in Markdo
 ### In-Person Workshop
 
 - **Recommended Setup:** Instructor with projection + participants with individual laptops/terminal access
-- **Timing:** 2.5 hours total; adjust for your audience's experience level
+- **Timing:** about 3.5 hours total; adjust for your audience's experience level
 - **Pacing:** Allow breaks every 30 minutes
 - **Hands-on:** Participants should code along with each example
 
