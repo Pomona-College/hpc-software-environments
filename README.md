@@ -122,3 +122,11 @@ Email feedback to its-hpc@pomona.edu with "Workshop Feedback" in the subject lin
 
 **Sagehen HPC Cluster**
 Pomona College Information Technology Services
+
+## Acknowledgments
+
+**Andrew Wilson** — Director of Research Computing and Digital Scholarship,
+Pomona College. Workshop design and development.
+
+**Andrei Motchenko** — testing, editing, cleanup and screenshots across the
+Pomona College HPC Workshop Series.
