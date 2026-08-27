@@ -74,6 +74,8 @@ Some packages are on conda-forge, a community channel with more recent versions:
 
 The `-c conda-forge` flag tells conda to search the conda-forge channel.
 
+![Four steps, in this order — the module first, then the environment.](fig/03-conda-workflow.png){alt='Four steps for building a conda environment: load the miniconda3 module, create the environment with conda create -n myenv python=3.11, activate it with conda activate myenv, then install packages with conda install or python3 -m pip install. A note adds that conda env export --from-history lets a collaborator rebuild it exactly, and that environments live in /rhome/$USER/.conda/envs and count against the 100 GB quota.'}
+
 ## Organizing Your Environments
 
 ::::::::::::::::::::::::::::::::::::: callout

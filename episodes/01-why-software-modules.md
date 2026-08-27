@@ -38,6 +38,8 @@ On a shared system with hundreds of users, this would be chaos.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 
+![Four commands cover almost everything you will do with modules.](fig/01-module-load-flow.png){alt='Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script.'}
+
 ## The Solution: Environment Modules
 
 Environment modules (managed by **Lmod** on Sagehen) solve this problem by dynamically modifying your shell environment. A module is essentially a collection of instructions that:

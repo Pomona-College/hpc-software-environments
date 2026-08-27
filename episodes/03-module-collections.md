@@ -34,6 +34,8 @@ Currently Loaded Modules:
   1) openmpi/4.1.5_ucx-1.14.0    2) gaussian/16c01_avx2    3) miniconda3/py313_26.3.2-2    4) ncbi-blast/2.13.0+
 ```
 
+![Save the set once, restore it in one command afterwards.](fig/04-module-collections.png){alt='Two panels. On the left, saving a set you use often: load the modules you want, for example miniconda3 and cuda/12.2.1, then run module save myproject. On the right, restoring it later: module restore myproject loads everything at once. Notes mention module savelist and module describe, and warn that collections are per-user and do not carry into a SLURM job unless restored there too.'}
+
 ## Swapping Module Versions
 
 To switch between software versions, use `module swap`:
