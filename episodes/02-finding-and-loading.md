@@ -63,10 +63,9 @@ $ module keyword chemistry   # searches module descriptions, not just names
 `module keyword` searches the descriptive text -- useful when you don't know
 the package's exact name.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
 ![Check for a module before you reach for conda, and ask before you compile.](fig/02-modules-vs-conda.png){alt='A decision tree asking where software should come from. If module avail NAME finds it, use module load NAME, since it is installed and maintained by ITS and built for this hardware. If not, and it is a Python or R package, create your own conda environment. Otherwise, contact its-hpc@pomona.edu before compiling from source, because it may already exist or be worth adding as a module.'}
 
+:::::::::::::::::::::::::::::::::::::::::  callout
 ## Why not just pipe to `grep`?
 
 You'll see `module avail -t | grep name` suggested online, but on Sagehen it
