@@ -348,7 +348,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Why Software Modules?</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/01-why-software-modules.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -397,10 +397,10 @@ software</li>
 <div id="the-version-conflict-problem" class="callout-inner">
 <h3 class="callout-title">The Version Conflict Problem</h3>
 <div class="callout-content">
-<p>Imagine you’re working on Sagehen with two research groups. One group
-needs R version 3.6.0 for legacy analysis scripts that haven’t been
-updated in five years. Another group requires R version 4.2.3 for their
-latest genomics pipeline. Your colleague needs Gaussian 16 to run
+<p>Imagine you’re working on Sagehen HPC with two research groups. One
+group needs R version 3.6.0 for legacy analysis scripts that haven’t
+been updated in five years. Another group requires R version 4.2.3 for
+their latest genomics pipeline. Your colleague needs Gaussian 16 to run
 quantum chemistry simulations, but you need Gaussian 09 for continuity
 with your previous research.</p>
 <p>Without a way to manage these different versions, installing them all
@@ -413,7 +413,9 @@ different projects simultaneously</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="the-solution-environment-modules">The Solution: Environment Modules<a class="anchor" aria-label="anchor" href="#the-solution-environment-modules"></a></h2>
+<figure><img src="../fig/01-module-load-flow.png" alt="Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script." class="figure mx-auto d-block"><div class="figcaption">Four commands cover almost everything you will
+do with modules.</div>
+</figure></section><section><h2 class="section-heading" id="the-solution-environment-modules">The Solution: Environment Modules<a class="anchor" aria-label="anchor" href="#the-solution-environment-modules"></a></h2>
 <hr class="half-width"><p>Environment modules (managed by <strong>Lmod</strong> on Sagehen)
 solve this problem by dynamically modifying your shell environment. A
 module is essentially a collection of instructions that:</p>
@@ -492,7 +494,7 @@ the output and identify:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Output will vary, but a typical response shows:</p>
 <pre><code>R versions:
@@ -596,8 +598,8 @@ explicitly to get other versions</li>
   "url": "https://pomona-college.github.io/hpc-software-environments/instructor/01-why-software-modules.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/instructor/01-why-software-modules.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

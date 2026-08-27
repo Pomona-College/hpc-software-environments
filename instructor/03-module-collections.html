@@ -350,7 +350,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Module Collections and Defaults</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/03-module-collections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -403,7 +403,9 @@ software?</li>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">Currently</span> Loaded Modules:</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>  <span class="ex">1</span><span class="er">)</span> <span class="ex">openmpi/4.1.5_ucx-1.14.0</span>    2<span class="er">)</span> <span class="ex">gaussian/16c01_avx2</span>    3<span class="er">)</span> <span class="ex">miniconda3/py313_26.3.2-2</span>    4<span class="er">)</span> <span class="ex">ncbi-blast/2.13.0+</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="swapping-module-versions">Swapping Module Versions<a class="anchor" aria-label="anchor" href="#swapping-module-versions"></a></h2>
+<figure><img src="../fig/04-module-collections.png" alt="Two panels. On the left, saving a set you use often: load the modules you want, for example miniconda3 and cuda/12.2.1, then run module save myproject. On the right, restoring it later: module restore myproject loads everything at once. Notes mention module savelist and module describe, and warn that collections are per-user and do not carry into a SLURM job unless restored there too." class="figure mx-auto d-block"><div class="figcaption">Save the set once, restore it in one command
+afterwards.</div>
+</figure></section><section><h2 class="section-heading" id="swapping-module-versions">Swapping Module Versions<a class="anchor" aria-label="anchor" href="#swapping-module-versions"></a></h2>
 <hr class="half-width"><p>To switch between software versions, use
 <code>module swap</code>:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -440,7 +442,7 @@ needs all those modules.</p>
 <div id="default-modules-at-login" class="callout-inner">
 <h3 class="callout-title">Default Modules at Login</h3>
 <div class="callout-content">
-<p>When you first log into Sagehen, certain modules might be
+<p>When you first log into Sagehen HPC, certain modules might be
 automatically loaded based on system configuration or your
 <code>.bashrc</code> file. Use <code>module purge</code> to clear them,
 then load only what you need for your current task.</p>
@@ -734,8 +736,8 @@ environment</li>
   "url": "https://pomona-college.github.io/hpc-software-environments/instructor/03-module-collections.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/instructor/03-module-collections.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

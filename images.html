@@ -399,21 +399,46 @@
         <h1>All Images</h1>
         
 <section id="01-why-software-modules"><h2 class="section-heading"><a href="01-why-software-modules.html">Why Software Modules?</a></h2>
-<hr class="half-width"></section><section id="02-finding-and-loading"><h2 class="section-heading"><a href="02-finding-and-loading.html">Finding and Loading Modules</a></h2>
-<hr class="half-width"></section><section id="03-module-collections"><h2 class="section-heading"><a href="03-module-collections.html">Module Collections and Defaults</a></h2>
-<hr class="half-width"></section><section id="04-introduction-to-conda"><h2 class="section-heading"><a href="04-introduction-to-conda.html">Introduction to Conda</a></h2>
+<hr class="half-width">
+<h3 id="01-why-software-modules-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script.’</p>
+<figure><img src="fig/01-module-load-flow.png" alt="Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script." class="figure mx-auto d-block"><div class="figcaption">Four commands cover almost everything you will
+do with modules.</div>
+</figure><hr></section><section id="02-finding-and-loading"><h2 class="section-heading"><a href="02-finding-and-loading.html">Finding and Loading Modules</a></h2>
+<hr class="half-width">
+<h3 id="02-finding-and-loading-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A decision tree asking where software should come from. If module avail NAME finds it, use module load NAME, since it is installed and maintained by ITS and built for this hardware. If not, and it is a Python or R package, create your own conda environment. Otherwise, contact its-hpc@pomona.edu before compiling from source, because it may already exist or be worth adding as a module.’</p>
+<figure><img src="fig/02-modules-vs-conda.png" alt="A decision tree asking where software should come from. If module avail NAME finds it, use module load NAME, since it is installed and maintained by ITS and built for this hardware. If not, and it is a Python or R package, create your own conda environment. Otherwise, contact its-hpc@pomona.edu before compiling from source, because it may already exist or be worth adding as a module." class="figure mx-auto d-block"><div class="figcaption">Check for a module before you reach for conda,
+and ask before you compile.</div>
+</figure><hr></section><section id="03-module-collections"><h2 class="section-heading"><a href="03-module-collections.html">Module Collections and Defaults</a></h2>
+<hr class="half-width">
+<h3 id="03-module-collections-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Two panels. On the left, saving a set you use often: load the modules you want, for example miniconda3 and cuda/12.2.1, then run module save myproject. On the right, restoring it later: module restore myproject loads everything at once. Notes mention module savelist and module describe, and warn that collections are per-user and do not carry into a SLURM job unless restored there too.’</p>
+<figure><img src="fig/04-module-collections.png" alt="Two panels. On the left, saving a set you use often: load the modules you want, for example miniconda3 and cuda/12.2.1, then run module save myproject. On the right, restoring it later: module restore myproject loads everything at once. Notes mention module savelist and module describe, and warn that collections are per-user and do not carry into a SLURM job unless restored there too." class="figure mx-auto d-block"><div class="figcaption">Save the set once, restore it in one command
+afterwards.</div>
+</figure><hr></section><section id="04-introduction-to-conda"><h2 class="section-heading"><a href="04-introduction-to-conda.html">Introduction to Conda</a></h2>
 <hr class="half-width">
 <h3 id="04-introduction-to-conda-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A page of module avail output highlighting three miniconda3 modules: py311, py312, and py313 versions, with the py313 version marked L and D, meaning loaded and default. Surrounding modules include matlab, mathematica, and openmpi.’</p>
 <figure><img src="fig/04-module-avail-miniconda3.png" alt="A page of module avail output highlighting three miniconda3 modules: py311, py312, and py313 versions, with the py313 version marked L and D, meaning loaded and default. Surrounding modules include matlab, mathematica, and openmpi." class="figure mx-auto d-block"><div class="figcaption">The miniconda3 module comes in three versions on
-Sagehen; <code>py313_26.3.2-2</code> is the default <code>(D)</code> —
-and often already loaded <code>(L)</code>.</div>
+Sagehen HPC; <code>py313_26.3.2-2</code> is the default <code>(D)</code>
+— and often already loaded <code>(L)</code>.</div>
 </figure><hr></section><section id="05-creating-conda-environments"><h2 class="section-heading"><a href="05-creating-conda-environments.html">Creating Conda Environments</a></h2>
-<hr class="half-width"></section><section id="06-managing-conda-packages"><h2 class="section-heading"><a href="06-managing-conda-packages.html">Managing Conda Packages</a></h2>
+<hr class="half-width">
+<h3 id="05-creating-conda-environments-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Four steps for building a conda environment: load the miniconda3 module, create the environment with conda create -n myenv python=3.11, activate it with conda activate myenv, then install packages with conda install or python3 -m pip install. A note adds that conda env export --from-history lets a collaborator rebuild it exactly, and that environments live in /rhome/$USER/.conda/envs and count against the 100 GB quota.’</p>
+<figure><img src="fig/03-conda-workflow.png" alt="Four steps for building a conda environment: load the miniconda3 module, create the environment with conda create -n myenv python=3.11, activate it with conda activate myenv, then install packages with conda install or python3 -m pip install. A note adds that conda env export --from-history lets a collaborator rebuild it exactly, and that environments live in /rhome/$USER/.conda/envs and count against the 100 GB quota." class="figure mx-auto d-block"><div class="figcaption">Four steps, in this order — the module first,
+then the environment.</div>
+</figure><hr></section><section id="06-managing-conda-packages"><h2 class="section-heading"><a href="06-managing-conda-packages.html">Managing Conda Packages</a></h2>
 <hr class="half-width"></section><section id="07-pip-and-virtualenvs"><h2 class="section-heading"><a href="07-pip-and-virtualenvs.html">pip and Virtual Environments</a></h2>
 <hr class="half-width"></section><section id="08-combining-conda-and-pip"><h2 class="section-heading"><a href="08-combining-conda-and-pip.html">Combining Conda and pip</a></h2>
 <hr class="half-width"></section><section id="09-environment-reproducibility"><h2 class="section-heading"><a href="09-environment-reproducibility.html">Environment Reproducibility</a></h2>
-<hr class="half-width"></section><section id="10-best-practices-troubleshooting"><h2 class="section-heading"><a href="10-best-practices-troubleshooting.html">Best Practices and Troubleshooting</a></h2>
+<hr class="half-width">
+<h3 id="09-environment-reproducibility-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Three separate conda environments shown side by side: project-a with python 3.11, numpy 1.26 and pandas 2.1; project-b with python 3.9, numpy 1.21 and an old pipeline; and ml-work with python 3.11 and PyTorch with CUDA at around 8 GB. All three sit on a single conda installation loaded with module load miniconda3. A note explains that separate environments mean project-b old numpy cannot break project-a.’</p>
+<figure><img src="fig/05-project-isolation.png" alt="Three separate conda environments shown side by side: project-a with python 3.11, numpy 1.26 and pandas 2.1; project-b with python 3.9, numpy 1.21 and an old pipeline; and ml-work with python 3.11 and PyTorch with CUDA at around 8 GB. All three sit on a single conda installation loaded with module load miniconda3. A note explains that separate environments mean project-b old numpy cannot break project-a." class="figure mx-auto d-block"><div class="figcaption">One conda installation underneath, one
+environment per project on top.</div>
+</figure><hr></section><section id="10-best-practices-troubleshooting"><h2 class="section-heading"><a href="10-best-practices-troubleshooting.html">Best Practices and Troubleshooting</a></h2>
 <hr class="half-width"></section>
 </div>
     </main>
@@ -464,8 +489,8 @@ and often already loaded <code>(L)</code>.</div>
   "url": "https://pomona-college.github.io/hpc-software-environments/images.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/images.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

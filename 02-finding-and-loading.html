@@ -348,7 +348,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Finding and Loading Modules</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/02-finding-and-loading.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -367,7 +367,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do I find specific software on Sagehen?</li>
+<ul><li>How do I find specific software on Sagehen HPC?</li>
 <li>How do I load and unload modules?</li>
 <li>How do I learn what a module does before loading it?</li>
 <li>What if I need software that isn’t available?</li>
@@ -437,7 +437,9 @@ up empty, think about what the software might ship inside.</p>
 <p><code>module spider</code> knows about every module and version on
 the system, and <code>module keyword</code> searches the descriptive
 text – useful when you don’t know the package’s exact name.</p>
-<div id="why-not-just-pipe-to-grep" class="callout">
+<figure><img src="fig/02-modules-vs-conda.png" alt="A decision tree asking where software should come from. If module avail NAME finds it, use module load NAME, since it is installed and maintained by ITS and built for this hardware. If not, and it is a Python or R package, create your own conda environment. Otherwise, contact its-hpc@pomona.edu before compiling from source, because it may already exist or be worth adding as a module." class="figure mx-auto d-block"><div class="figcaption">Check for a module before you reach for conda,
+and ask before you compile.</div>
+</figure><div id="why-not-just-pipe-to-grep" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -775,8 +777,8 @@ request it</li>
   "url": "https://pomona-college.github.io/hpc-software-environments/02-finding-and-loading.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/02-finding-and-loading.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

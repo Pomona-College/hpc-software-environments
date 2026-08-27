@@ -348,7 +348,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Environment Reproducibility</h1>
-        <p>Last updated on 2026-08-24 |
+        <p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/09-environment-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -426,7 +426,9 @@ environment changes.</p>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1" aria-label="code-block-1-17"></a><span class="ex">Rscript</span> analysis.R</span>
 <span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a><span class="ex">python</span> postprocess.py</span></code></pre>
 </div>
-</div>
+<figure><img src="fig/05-project-isolation.png" alt="Three separate conda environments shown side by side: project-a with python 3.11, numpy 1.26 and pandas 2.1; project-b with python 3.9, numpy 1.21 and an old pipeline; and ml-work with python 3.11 and PyTorch with CUDA at around 8 GB. All three sit on a single conda installation loaded with module load miniconda3. A note explains that separate environments mean project-b old numpy cannot break project-a." class="figure mx-auto d-block"><div class="figcaption">One conda installation underneath, one
+environment per project on top.</div>
+</figure></div>
 </section><section><h2 class="section-heading" id="pin-versions-for-reproducibility">Pin Versions for Reproducibility<a class="anchor" aria-label="anchor" href="#pin-versions-for-reproducibility"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="dynamic-vs--pinned-environment-yml">Dynamic vs. pinned environment.yml<a class="anchor" aria-label="anchor" href="#dynamic-vs--pinned-environment-yml"></a></h3>
@@ -584,7 +586,8 @@ Script</h3>
 <li>Loading specific module versions (not defaults)</li>
 <li>Explicit conda environment activation</li>
 <li>Verification commands to prove setup worked</li>
-</ul><p>This is the minimal reproducible template for any Sagehen job.</p>
+</ul><p>This is the minimal reproducible template for any Sagehen HPC
+job.</p>
 </div>
 </div>
 </div>
@@ -724,8 +727,8 @@ environment</li>
   "url": "https://pomona-college.github.io/hpc-software-environments/09-environment-reproducibility.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/09-environment-reproducibility.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-24",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>

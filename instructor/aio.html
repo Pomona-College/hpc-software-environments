@@ -402,7 +402,7 @@
         
 <section id="aio-01-why-software-modules"><p>Content from <a href="01-why-software-modules.html">Why Software Modules?</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/01-why-software-modules.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -450,10 +450,10 @@ software</li>
 <div id="the-version-conflict-problem" class="callout-inner">
 <h3 class="callout-title">The Version Conflict Problem</h3>
 <div class="callout-content">
-<p>Imagine you’re working on Sagehen with two research groups. One group
-needs R version 3.6.0 for legacy analysis scripts that haven’t been
-updated in five years. Another group requires R version 4.2.3 for their
-latest genomics pipeline. Your colleague needs Gaussian 16 to run
+<p>Imagine you’re working on Sagehen HPC with two research groups. One
+group needs R version 3.6.0 for legacy analysis scripts that haven’t
+been updated in five years. Another group requires R version 4.2.3 for
+their latest genomics pipeline. Your colleague needs Gaussian 16 to run
 quantum chemistry simulations, but you need Gaussian 09 for continuity
 with your previous research.</p>
 <p>Without a way to manage these different versions, installing them all
@@ -466,7 +466,9 @@ different projects simultaneously</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="the-solution-environment-modules">The Solution: Environment Modules<a class="anchor" aria-label="anchor" href="#the-solution-environment-modules"></a>
+<figure><img src="../fig/01-module-load-flow.png" alt="Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script." class="figure mx-auto d-block"><div class="figcaption">Four commands cover almost everything you will
+do with modules.</div>
+</figure></section><section><h2 class="section-heading" id="the-solution-environment-modules">The Solution: Environment Modules<a class="anchor" aria-label="anchor" href="#the-solution-environment-modules"></a>
 </h2>
 <hr class="half-width">
 <p>Environment modules (managed by <strong>Lmod</strong> on Sagehen)
@@ -557,7 +559,7 @@ the output and identify:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Output will vary, but a typical response shows:</p>
 <pre><code>R versions:
@@ -605,7 +607,7 @@ explicitly to get other versions</li>
 <!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
 <script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script></section></section><section id="aio-02-finding-and-loading"><p>Content from <a href="02-finding-and-loading.html">Finding and Loading Modules</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/02-finding-and-loading.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -620,7 +622,7 @@ explicitly to get other versions</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do I find specific software on Sagehen?</li>
+<li>How do I find specific software on Sagehen HPC?</li>
 <li>How do I load and unload modules?</li>
 <li>How do I learn what a module does before loading it?</li>
 <li>What if I need software that isn’t available?</li>
@@ -697,7 +699,9 @@ up empty, think about what the software might ship inside.</p>
 <p><code>module spider</code> knows about every module and version on
 the system, and <code>module keyword</code> searches the descriptive
 text – useful when you don’t know the package’s exact name.</p>
-<div id="why-not-just-pipe-to-grep" class="callout">
+<figure><img src="../fig/02-modules-vs-conda.png" alt="A decision tree asking where software should come from. If module avail NAME finds it, use module load NAME, since it is installed and maintained by ITS and built for this hardware. If not, and it is a Python or R package, create your own conda environment. Otherwise, contact its-hpc@pomona.edu before compiling from source, because it may already exist or be worth adding as a module." class="figure mx-auto d-block"><div class="figcaption">Check for a module before you reach for conda,
+and ask before you compile.</div>
+</figure><div id="why-not-just-pipe-to-grep" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1014,7 +1018,7 @@ request it</li>
 </div>
 </section></section><section id="aio-03-module-collections"><p>Content from <a href="03-module-collections.html">Module Collections and Defaults</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/03-module-collections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -1066,7 +1070,9 @@ software?</li>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">Currently</span> Loaded Modules:</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>  <span class="ex">1</span><span class="er">)</span> <span class="ex">openmpi/4.1.5_ucx-1.14.0</span>    2<span class="er">)</span> <span class="ex">gaussian/16c01_avx2</span>    3<span class="er">)</span> <span class="ex">miniconda3/py313_26.3.2-2</span>    4<span class="er">)</span> <span class="ex">ncbi-blast/2.13.0+</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="swapping-module-versions">Swapping Module Versions<a class="anchor" aria-label="anchor" href="#swapping-module-versions"></a>
+<figure><img src="../fig/04-module-collections.png" alt="Two panels. On the left, saving a set you use often: load the modules you want, for example miniconda3 and cuda/12.2.1, then run module save myproject. On the right, restoring it later: module restore myproject loads everything at once. Notes mention module savelist and module describe, and warn that collections are per-user and do not carry into a SLURM job unless restored there too." class="figure mx-auto d-block"><div class="figcaption">Save the set once, restore it in one command
+afterwards.</div>
+</figure></section><section><h2 class="section-heading" id="swapping-module-versions">Swapping Module Versions<a class="anchor" aria-label="anchor" href="#swapping-module-versions"></a>
 </h2>
 <hr class="half-width">
 <p>To switch between software versions, use
@@ -1107,7 +1113,7 @@ needs all those modules.</p>
 <div id="default-modules-at-login" class="callout-inner">
 <h3 class="callout-title">Default Modules at Login</h3>
 <div class="callout-content">
-<p>When you first log into Sagehen, certain modules might be
+<p>When you first log into Sagehen HPC, certain modules might be
 automatically loaded based on system configuration or your
 <code>.bashrc</code> file. Use <code>module purge</code> to clear them,
 then load only what you need for your current task.</p>
@@ -1357,7 +1363,7 @@ environment</li>
 </div>
 </section></section><section id="aio-04-introduction-to-conda"><p>Content from <a href="04-introduction-to-conda.html">Introduction to Conda</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/04-introduction-to-conda.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -1422,8 +1428,8 @@ language-specific packages.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">conda</span> 26.3.2</span></code></pre>
 </div>
 <figure><img src="../fig/04-module-avail-miniconda3.png" alt="A page of module avail output highlighting three miniconda3 modules: py311, py312, and py313 versions, with the py313 version marked L and D, meaning loaded and default. Surrounding modules include matlab, mathematica, and openmpi." class="figure mx-auto d-block"><div class="figcaption">The miniconda3 module comes in three versions on
-Sagehen; <code>py313_26.3.2-2</code> is the default <code>(D)</code> —
-and often already loaded <code>(L)</code>.</div>
+Sagehen HPC; <code>py313_26.3.2-2</code> is the default <code>(D)</code>
+— and often already loaded <code>(L)</code>.</div>
 </figure>
 </div>
 <div class="section level3">
@@ -1559,7 +1565,7 @@ Environment</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>After activation:</p>
 <pre><code>which python outputs: /rhome/&lt;myusername&gt;/.conda/envs/data_sci/bin/python
@@ -1595,7 +1601,7 @@ isolated environments</li>
 <!-- highlight <labname>/<myusername> placeholders in code blocks; remove if the varnish theme handles this natively -->
 <script>(function(){var CSS='.sh-placeholder{color:#c2410c;font-weight:700}[data-bs-theme="dark"] .sh-placeholder,html.dark .sh-placeholder{color:#fdba74}@media (prefers-color-scheme: dark){[data-bs-theme="auto"] .sh-placeholder{color:#fdba74}}';var RX=/<labname>|<myusername>/g;function firstMatch(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],full='';while(w.nextNode()){nodes.push({n:w.currentNode,s:full.length});full+=w.currentNode.nodeValue;}RX.lastIndex=0;var m;while((m=RX.exec(full))){var s=m.index,e=s+m[0].length,inSpan=false,parts=[];for(var j=0;j<nodes.length;j++){var ns=nodes[j].s,ne=ns+nodes[j].n.nodeValue.length;if(ne<=s||ns>=e)continue;parts.push({node:nodes[j].n,a:Math.max(s-ns,0),b:Math.min(e-ns,nodes[j].n.nodeValue.length)});var p=nodes[j].n.parentNode;while(p&&p!==el){if(p.classList&&p.classList.contains('sh-placeholder')){inSpan=true;break;}p=p.parentNode;}}if(!inSpan&&parts.length)return parts;}return null;}function wrapParts(parts){for(var i=parts.length-1;i>=0;i--){var t=parts[i].node,txt=t.nodeValue,a=parts[i].a,b=parts[i].b;var span=document.createElement('span');span.className='sh-placeholder';span.textContent=txt.slice(a,b);var f=document.createDocumentFragment();if(a>0)f.appendChild(document.createTextNode(txt.slice(0,a)));f.appendChild(span);if(b<txt.length)f.appendChild(document.createTextNode(txt.slice(b)));t.parentNode.replaceChild(f,t);}}function run(){var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);document.querySelectorAll('pre,code').forEach(function(el){var guard=0,parts;while((parts=firstMatch(el))&&guard++<500){wrapParts(parts);}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}})();</script></section></section><section id="aio-05-creating-conda-environments"><p>Content from <a href="05-creating-conda-environments.html">Creating Conda Environments</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/05-creating-conda-environments.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -1685,6 +1691,9 @@ recent versions:</p>
 </div>
 <p>The <code>-c conda-forge</code> flag tells conda to search the
 conda-forge channel.</p>
+<figure><img src="../fig/03-conda-workflow.png" alt="Four steps for building a conda environment: load the miniconda3 module, create the environment with conda create -n myenv python=3.11, activate it with conda activate myenv, then install packages with conda install or python3 -m pip install. A note adds that conda env export --from-history lets a collaborator rebuild it exactly, and that environments live in /rhome/$USER/.conda/envs and count against the 100 GB quota." class="figure mx-auto d-block"><div class="figcaption">Four steps, in this order — the module first,
+then the environment.</div>
+</figure>
 </div>
 </section><section><h2 class="section-heading" id="organizing-your-environments">Organizing Your Environments<a class="anchor" aria-label="anchor" href="#organizing-your-environments"></a>
 </h2>
@@ -1856,7 +1865,7 @@ scripts</li>
 </div>
 </section></section><section id="aio-06-managing-conda-packages"><p>Content from <a href="06-managing-conda-packages.html">Managing Conda Packages</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/06-managing-conda-packages.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1960,8 +1969,8 @@ dependencies), allowing conda to resolve them on different systems.</p>
 <div class="callout-content">
 <p>Conda environments can use hundreds of MB to several GB each. On
 shared systems with disk quotas, this matters. Regularly check your
-usage and clean up old environments to stay under your limit. On
-Sagehen, /rhome and /bigdata share a 1 TB lab quota.</p>
+usage and clean up old environments to stay under your limit. On Sagehen
+HPC, /rhome and /bigdata share a 1 TB lab quota.</p>
 </div>
 </div>
 </div>
@@ -2029,7 +2038,7 @@ freeing 500 MB to 2 GB.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The YAML file contains:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -2084,7 +2093,7 @@ space</li>
 </div>
 </section></section><section id="aio-07-pip-and-virtualenvs"><p>Content from <a href="07-pip-and-virtualenvs.html">pip and Virtual Environments</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/07-pip-and-virtualenvs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -2125,7 +2134,7 @@ conda?</li>
 <section><h2 class="section-heading" id="choosing-the-right-tool">Choosing the Right Tool<a class="anchor" aria-label="anchor" href="#choosing-the-right-tool"></a>
 </h2>
 <hr class="half-width">
-<p>Three main Python package management tools exist on Sagehen:</p>
+<p>Three main Python package management tools exist on Sagehen HPC:</p>
 <table class="table">
 <colgroup>
 <col width="21%">
@@ -2539,7 +2548,7 @@ requirements.txt</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The requirements.txt file contains:</p>
 <pre><code>beautifulsoup4==4.12.2
@@ -2577,7 +2586,7 @@ which tools you use</li>
 </div>
 </section></section><section id="aio-09-environment-reproducibility"><p>Content from <a href="09-environment-reproducibility.html">Environment Reproducibility</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/09-environment-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -2657,6 +2666,9 @@ environment changes.</p>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1" aria-label="code-block-1-17"></a><span class="ex">Rscript</span> analysis.R</span>
 <span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a><span class="ex">python</span> postprocess.py</span></code></pre>
 </div>
+<figure><img src="../fig/05-project-isolation.png" alt="Three separate conda environments shown side by side: project-a with python 3.11, numpy 1.26 and pandas 2.1; project-b with python 3.9, numpy 1.21 and an old pipeline; and ml-work with python 3.11 and PyTorch with CUDA at around 8 GB. All three sit on a single conda installation loaded with module load miniconda3. A note explains that separate environments mean project-b old numpy cannot break project-a." class="figure mx-auto d-block"><div class="figcaption">One conda installation underneath, one
+environment per project on top.</div>
+</figure>
 </div>
 </section><section><h2 class="section-heading" id="pin-versions-for-reproducibility">Pin Versions for Reproducibility<a class="anchor" aria-label="anchor" href="#pin-versions-for-reproducibility"></a>
 </h2>
@@ -2830,7 +2842,8 @@ Script</h3>
 <li>Explicit conda environment activation</li>
 <li>Verification commands to prove setup worked</li>
 </ul>
-<p>This is the minimal reproducible template for any Sagehen job.</p>
+<p>This is the minimal reproducible template for any Sagehen HPC
+job.</p>
 </div>
 </div>
 </div>
@@ -2914,7 +2927,7 @@ environment</li>
 </div>
 </section></section><section id="aio-10-best-practices-troubleshooting"><p>Content from <a href="10-best-practices-troubleshooting.html">Best Practices and Troubleshooting</a></p>
 <hr>
-<p>Last updated on 2026-08-24 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/Pomona-College/hpc-software-environments/edit/main/episodes/10-best-practices-troubleshooting.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -2965,7 +2978,7 @@ environment</li>
 <div class="callout-content">
 <p>Conda environments can consume substantial disk space. Regular
 maintenance prevents quota problems and keeps your cluster account
-healthy. On Sagehen, /rhome and /bigdata share a 1 TB lab quota.</p>
+healthy. On Sagehen HPC, /rhome and /bigdata share a 1 TB lab quota.</p>
 </div>
 </div>
 </div>
@@ -3196,7 +3209,7 @@ repository</label></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Expected output from quota_check.sh shows your current usage and
 limit. <code>du -sh --apparent-size</code> shows sizes like:</p>
@@ -3283,8 +3296,8 @@ versions explicitly</li>
   "url": "https://pomona-college.github.io/hpc-software-environments/instructor/aio.html",
   "identifier": "https://pomona-college.github.io/hpc-software-environments/instructor/aio.html",
   "dateCreated": "2026-03-05",
-  "dateModified": "2026-08-26",
-  "datePublished": "2026-08-26"
+  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-27"
 }
 
   </script><script>
