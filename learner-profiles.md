@@ -54,7 +54,7 @@ Jordan runs quantum chemistry simulations with GAMESS and Gaussian, followed by 
 **Background:** One semester of Python experience, no HPC experience, never used Linux before workshop
 
 **Current Challenge:**
-Sam needs to use machine learning libraries (TensorFlow, scikit-learn) on Sagehen for a research project but:
+Sam needs to use machine learning libraries (TensorFlow, scikit-learn) on Sagehen HPC for a research project but:
 - Doesn't understand what "modules" are or why they're necessary
 - Installed packages with `pip install --user` globally and now confused about versions
 - Script works on their laptop but fails on Sagehen

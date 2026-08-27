@@ -26,7 +26,7 @@ exercises: 5
 
 ### The Version Conflict Problem
 
-Imagine you're working on Sagehen with two research groups. One group needs R version 3.6.0 for legacy analysis scripts that haven't been updated in five years. Another group requires R version 4.2.3 for their latest genomics pipeline. Your colleague needs Gaussian 16 to run quantum chemistry simulations, but you need Gaussian 09 for continuity with your previous research.
+Imagine you're working on Sagehen HPC with two research groups. One group needs R version 3.6.0 for legacy analysis scripts that haven't been updated in five years. Another group requires R version 4.2.3 for their latest genomics pipeline. Your colleague needs Gaussian 16 to run quantum chemistry simulations, but you need Gaussian 09 for continuity with your previous research.
 
 Without a way to manage these different versions, installing them all in the same locations (like `/usr/bin` or `/usr/lib`) creates conflicts:
 - Programs and libraries overwrite each other
@@ -37,6 +37,8 @@ Without a way to manage these different versions, installing them all in the sam
 On a shared system with hundreds of users, this would be chaos.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
+
+![Four commands cover almost everything you will do with modules.](fig/01-module-load-flow.png){alt='Four module commands in sequence: module avail to see what exists, module load NAME to add it to your PATH, module list to confirm what is loaded, and module purge to start clean again. A note explains that modules change environment variables only, nothing is installed or copied, and that they do not carry into a SLURM job so must be loaded again inside the script.'}
 
 ## The Solution: Environment Modules
 

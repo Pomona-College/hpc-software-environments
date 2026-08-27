@@ -28,7 +28,7 @@ exercises: 5
 
 ### Prevent Quota Issues
 
-Conda environments can consume substantial disk space. Regular maintenance prevents quota problems and keeps your cluster account healthy. On Sagehen, /rhome and /bigdata share a 1 TB lab quota.
+Conda environments can consume substantial disk space. Regular maintenance prevents quota problems and keeps your cluster account healthy. On Sagehen HPC, /rhome and /bigdata share a 1 TB lab quota.
 
 ::::::::::::::::::::::::::::::::::::::::::::::
 

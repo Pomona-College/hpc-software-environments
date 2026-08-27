@@ -45,7 +45,7 @@ $ conda --version
 conda 26.3.2
 ```
 
-![The miniconda3 module comes in three versions on Sagehen; `py313_26.3.2-2` is the default `(D)` — and often already loaded `(L)`.](fig/04-module-avail-miniconda3.png){alt='A page of module avail output highlighting three miniconda3 modules: py311, py312, and py313 versions, with the py313 version marked L and D, meaning loaded and default. Surrounding modules include matlab, mathematica, and openmpi.'}
+![The miniconda3 module comes in three versions on Sagehen HPC; `py313_26.3.2-2` is the default `(D)` — and often already loaded `(L)`.](fig/04-module-avail-miniconda3.png){alt='A page of module avail output highlighting three miniconda3 modules: py311, py312, and py313 versions, with the py313 version marked L and D, meaning loaded and default. Surrounding modules include matlab, mathematica, and openmpi.'}
 
 ### Step 2: Create an environment
 

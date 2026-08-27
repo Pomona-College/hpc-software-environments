@@ -23,7 +23,7 @@ exercises: 5
 
 ## Choosing the Right Tool
 
-Three main Python package management tools exist on Sagehen:
+Three main Python package management tools exist on Sagehen HPC:
 
 | Tool | Best For | Pros | Cons |
 |------|----------|------|------|

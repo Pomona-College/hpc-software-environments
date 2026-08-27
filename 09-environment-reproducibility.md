@@ -54,6 +54,8 @@ Rscript analysis.R
 python postprocess.py
 ```
 
+![One conda installation underneath, one environment per project on top.](fig/05-project-isolation.png){alt='Three separate conda environments shown side by side: project-a with python 3.11, numpy 1.26 and pandas 2.1; project-b with python 3.9, numpy 1.21 and an old pipeline; and ml-work with python 3.11 and PyTorch with CUDA at around 8 GB. All three sit on a single conda installation loaded with module load miniconda3. A note explains that separate environments mean project-b old numpy cannot break project-a.'}
+
 ## Pin Versions for Reproducibility
 
 ### Dynamic vs. pinned environment.yml
@@ -198,7 +200,7 @@ The script demonstrates the key reproducibility practices:
 - Explicit conda environment activation
 - Verification commands to prove setup worked
 
-This is the minimal reproducible template for any Sagehen job.
+This is the minimal reproducible template for any Sagehen HPC job.
 
 :::::::::::::::::::::::::::
 
